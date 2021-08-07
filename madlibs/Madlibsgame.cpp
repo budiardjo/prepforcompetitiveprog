@@ -22,44 +22,43 @@ int main() {
 	int number = askNumber();
 	string bodyPart = askText("Enter a body part: ");
 	string verb = askText("Enter a verb: ");
-
 	tellStory(name, noun, number, bodyPart, verb);
 	return 0;
 }
 
 
-cout << "/tWelcome to Mad Libs." << endl << endl;
-cout << "Please provide the following to help create a new story.";
-cout << endl << endl;
+//welcome player and provide instructions
+void welcomePlayer() {
+	cout << "/tWelcome to Mad Libs." << endl << endl;
+	cout << "Please provide the following to help create a new story.";
+	cout << endl << endl;
+}
 
 
-
-{
+//prompt player for text, return as a string object
+string askText(const string& prompt) {
 	string text;
-
 	cout << prompt;
 	cin >> text;
-
 	return text;
 }
 
-{
-	int num;
 
+//prompt player for number, return as an int
+int askNumber(const string& prompt) {
+	int num;
 	cout << prompt;
 	cin >> num;
-
 	return num;
 }
 
 
-void tellStory(const string& aName, const string& aNoun, int aNumber,
-               const string& aBodyPart, const string& aVerb)
-
-
-
-
-{
+//display story using string objects and int passed in
+void tellStory(const string& aName,
+               const string& aNoun,
+               int aNumber,
+               const string& aBodyPart,
+               const string& aVerb) {
 	cout << endl << "Here's your story:" << endl << endl;
 	cout << "The famous explorer ";
 	cout << aName;
@@ -75,7 +74,7 @@ void tellStory(const string& aName, const string& aNoun, int aNumber,
 	cout << ", a tear came to ";
 	cout << aName << "'s ";
 	cout << aBodyPart << "." << endl;
-	cout << "After all this time, the quest was fi nallyover. ";
+	cout << "After all this time, the quest was finally over. ";
 	cout << "And then, the ";
 	cout << aNoun << endl;
 	cout << "promptly devoured ";
@@ -83,4 +82,4 @@ void tellStory(const string& aName, const string& aNoun, int aNumber,
 	cout << "The moral of the story? Be careful what you ";
 	cout << aVerb;
 	cout << " for.";
-};
+}
