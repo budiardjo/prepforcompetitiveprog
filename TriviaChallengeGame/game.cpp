@@ -15,16 +15,14 @@ void Game::DisplayInstructions() const {
 }
 
 //receives input from the player
-int Game::GetMenuResponse(int numChoices)
-
-{
+int Game::GetMenuResponse(int numChoices) {
 	int response;
 //read the user's choice (must be valid)
 	do {
 		cout << "Enter your choice: ";
 		cin >> response;
 	} while(cin.good() && (response < 1 || response > numChoices));
-	                       
+
 	if (cin.fail()) { //exit if there was a problem
 		cout << endl << "Goodbye!" << endl;
 		exit(1);
