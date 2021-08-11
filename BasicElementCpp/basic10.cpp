@@ -17,7 +17,7 @@ int main () {
 		cout << endl;
 		
 		calBurnedInAWeek = calBurnedInAWeek + calBurnedInADay;
-		day = day + 1;
+		day++;
 		
 	}
 	
