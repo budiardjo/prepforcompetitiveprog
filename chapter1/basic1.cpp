@@ -1,10 +1,15 @@
-#include <SSDL.h>
+#include <iostream>
 
-int main (int argc, char** argv) {
-	SSDL_RenderDrawPoint (320, 240);
-	
-	SSDL_WaitKey ();
-	
-	return 0;
-	
+template
+void print(const T &t)
+{
+  std::cout << t << std::endl;
+}
+
+int main()
+{
+  print(1);
+  print(std::string("hello world"));
+  print(4.5);
+  print(false);
 }
