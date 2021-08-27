@@ -9,16 +9,17 @@ using namespace std;
 ***************************************************************/
 class Account
 {
-	private:
-	long accNumber;
-	double balance;
-	static int base; // Static data member
-	public:
-	Account (double bal); // Constructor
-	~Account (); // Destructor
-	void checkBalance () const; // Accessor
-	void deposit (double amount); // Mutator
-	void withdraw (double amount); // Mutator
+private:
+long accNumber;
+double balance;
+
+static int base; // Static data member
+public:
+Account (double bal); // Constructor
+~Account (); // Destructor
+void checkBalance () const; // Accessor
+void deposit (double amount); // Mutator
+void withdraw (double amount); // Mutator
 };
 // Initialization of static data member
 int Account :: base = 0;
@@ -70,14 +71,14 @@ cout << "Transaction aborted." << endl;
 // Mutator member function
 void Account :: withdraw (double amount)
 {
-	if (amount > balance)
-	{
-	amount = balance;
-	}
-	balance -= amount;
-	cout << "Account #: " << accNumber << endl;
-	cout << "Transaction: withdraw of $" << amount << endl;
-	cout << "New balance: $" << balance << endl << endl;
+if (amount > balance)
+{
+amount = balance;
+}
+balance -= amount;
+cout << "Account #: " << accNumber << endl;
+cout << "Transaction: withdraw of $" << amount << endl;
+cout << "New balance: $" << balance << endl << endl;
 }
 /***************************************************************
 * Application (the main function) to use the account class *
