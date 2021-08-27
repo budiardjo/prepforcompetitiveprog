@@ -16,6 +16,9 @@ cout <<"* Hello Friends *" << endl;
 cout <<"*******************" ;
 return;
 }
+
+
+
 int main ( )
 {
 greeting(); // Calling the greeting function (expression statement)
